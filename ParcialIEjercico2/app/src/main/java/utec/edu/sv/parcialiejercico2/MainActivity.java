@@ -27,33 +27,37 @@ TextView tvMostrar;
         esta= Double.parseDouble(edtEsta.getText().toString());
         IMC = ((peso)/(esta*esta));
         if (IMC<10.5){
-            tvMostrar.setText("Criticamente bajo de peso");
+            tvMostrar.setText("Criticamente bajo de peso"+"\nIMC = "+IMC );
         }
         else
             if (IMC<15.9){
-                tvMostrar.setText("Severamente bajo de peso");
+                tvMostrar.setText("Severamente bajo de peso"+"\nIMC = "+IMC );
             }
             else
                 if (IMC<18.5){
-                    tvMostrar.setText("Bajo de Peso");
+                    tvMostrar.setText("Bajo de Peso"+"\nIMC = "+IMC );
                 }
                 else
                     if (IMC < 25){
-                        tvMostrar.setText("Normal (Peso Saludable)");
+                        tvMostrar.setText("Normal (Peso Saludable)"+"\nIMC = "+IMC );
                     }
                     else
                         if(IMC<30){
-                            tvMostrar.setText("Sobrepeso");
+                            tvMostrar.setText("Sobrepeso"+"\nIMC = "+IMC );
                     }
                         else
                             if (IMC<35){
-                                tvMostrar.setText("Obesidad Clase 1 - Moderadamente Obeso");
+                                tvMostrar.setText("Obesidad Clase 1 - Moderadamente Obeso"+"\nIMC = "+IMC );
                             }
                             else
                                 if (IMC<40){
-                                    tvMostrar.setText("Obesidad clase 2 - Severamente Obeso");
+                                    tvMostrar.setText("Obesidad clase 2 - Severamente Obeso"+"\nIMC = "+IMC );
                             }
-                                else
-                                    tvMostrar.setText("Obesidad Clase 3 - Criticamente Obeso");
+                                else{
+                                    tvMostrar.setText("Obesidad Clase 3 - Criticamente Obeso"+"\nIMC = "+IMC );
+                                }
+                       edtPeso.setText("");
+                                edtEsta.setText("");
     }
+
 }
