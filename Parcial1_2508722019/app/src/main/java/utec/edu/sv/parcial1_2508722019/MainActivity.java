@@ -38,10 +38,16 @@ Button btnlogin;
    }
 
    public void login(View v){
-
-       Intent mostrar = new Intent(this,Home.class);
-       startActivity(mostrar);
+        String use, pas;
+        use = edtUser.getText().toString();
+        pas = edtPass.getText().toString();
+        if ( use.equals("parcialETps1") && pas.equals("p4rC14l#tp$") ){
+            Intent mostrar = new Intent(this,Home.class);
+            startActivity(mostrar);
+        }
+        
 
    }
+
 
 }
