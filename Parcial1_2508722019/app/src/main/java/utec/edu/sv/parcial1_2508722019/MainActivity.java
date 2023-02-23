@@ -53,7 +53,7 @@ Button btnlogin;
             LayoutInflater inflater =getLayoutInflater();
             View layout=inflater.inflate(R.layout.toast_layout,(ViewGroup) findViewById(R.id.lytMensaje));
 
-            TextView txtMensaje=(TextView) layout.findViewById(R.id.textView3);
+            TextView txtMensaje=(TextView) layout.findViewById(R.id.tvmensaje);
             txtMensaje.setText("contraseña y usuario no son correctos");
 
             toastP.setDuration(Toast.LENGTH_LONG);
