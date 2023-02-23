@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 EditText edtUser,edtPass;
@@ -45,7 +48,18 @@ Button btnlogin;
             Intent mostrar = new Intent(this,Home.class);
             startActivity(mostrar);
         }
-        
+        else {
+            Toast toastP = new Toast(getApplicationContext());
+            LayoutInflater inflater =getLayoutInflater();
+            View layout=inflater.inflate(R.layout.toast_layout,(ViewGroup) findViewById(R.id.lytMensaje));
+
+            TextView txtMensaje=(TextView) layout.findViewById(R.id.textView3);
+            txtMensaje.setText("contraseña y usuario no son correctos");
+
+            toastP.setDuration(Toast.LENGTH_LONG);
+            toastP.setView(layout);
+            toastP.show();
+        }
 
    }
 
