@@ -28,7 +28,5 @@ ImageView miro;
         tvcargo.setText(cargo);
         tvComp.setText(compania);
 
-
-
     }
 }
